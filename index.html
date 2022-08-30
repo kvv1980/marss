@@ -25,7 +25,7 @@
 </head>
 <body>
 
-<ul class="home-nav ">
+<ul class="home-nav hide-nav">
 	<li class="item item-1 item-bg-img-section current"><a href="#top-section">1</a></li>
 	<li class="item item-2 item-bg-img-section"><a href="#section2">2</a></li>
 	<li class="item item-3 item-about item-black"><a href="#section3">3</a></li>
@@ -110,7 +110,7 @@
 		</div>
 	</div>
 
-	<div id="fullpage">
+	<div id="fullpage" class="home">
 
 		<section class="bg-img-section section p-0 anim-section" id="top-section">
 			<div id="page-header-wrap"  class="fullscreen-header">
@@ -211,7 +211,7 @@
 
 		</section>
 
-		<section class="about section about-1" id="section3">
+		<section class="about section about-1 project-video" id="section3">
 			<div class="content-width">
 
 				<!--	h2 - big-text
@@ -226,7 +226,12 @@
 					<div class="item">
 						<a href="#">
 							<figure>
-								<img src="img/img-2-1.jpg" alt="">
+								<div class="video-wrap">
+									<img src="img/img-3-1.jpg" alt="">
+									<video muted loop playsinline  class="video">
+										<source src="video/fon.mp4" type="video/mp4">
+									</video>
+								</div>
 								<div class="text">
 									<h5>Apollo Beauty</h5>
 									<p>Skincare shop</p>

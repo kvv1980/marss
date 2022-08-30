@@ -4,13 +4,18 @@ jQuery(document).ready(function ($) {
   $(window).on('load', function (e){
     if($('.lang-wrap ul li:first-child').hasClass()){
       $('.lang-wrap ul').addClass('is-left')
-    }
+    };
+
+
+
   });
 
   $(window).on('load', function (e){
+    if($('*').is('.home')){
+      $('.bg-img-section .video-desk').get(0).play();
+      $('.bg-img-section .video-mob').get(0).play();
+    }
 
-    $('.bg-img-section .video-desk').get(0).play();
-    $('.bg-img-section .video-mob').get(0).play();
   })
 
   /*slider*/
@@ -102,6 +107,17 @@ jQuery(document).ready(function ($) {
     slidesPerView: 2,
     spaceBetween: 30,
     loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 5,
+      },
+      1279: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+
+    },
   });
 
 
@@ -124,31 +140,73 @@ jQuery(document).ready(function ($) {
 
   })
 
-/*$(".hover-block").on('click', function (e){
+$(".hover-block-popup").on('click', function (e){
     $(this).hide();
     $(this).find('video').get(0).play();
-  });*/
+  });
 
   /*menu anim*/
   $('.home-nav').onePageNav();
+  $('.design-nav').onePageNav();
 
 
  /* home anim*/
   $(document).scroll(function() {
-    if($('.home-nav .item-4').hasClass('current') || $('.home-nav .item-5').hasClass('current')){
-      $('.pre-footer').addClass('is-visible');
-    }else{
-      $('.pre-footer').removeClass('is-visible');
-    };
+
+    /*page home*/
+    if($('*').is('.home-nav')) {
+      if($('.home-nav .item-pre-footer').hasClass('current') || $('.home-nav .item-footer').hasClass('current')){
+        $('.pre-footer').addClass('is-visible');
+      }else{
+        $('.pre-footer').removeClass('is-visible');
+      };
 
 
-    if($('.home-nav .item-3').hasClass('current')){
-      $('header').addClass('black');
-      $('.fix').addClass('black');
-    }else{
-      $('header').removeClass('black');
-      $('.fix').removeClass('black');
-    };
+      if($('.item-black').hasClass('current')){
+        $('header').addClass('black');
+        $('.fix').addClass('black');
+      }else{
+        $('header').removeClass('black');
+        $('.fix').removeClass('black');
+      };
+
+    }
+
+    /*page web-design*/
+    if($('*').is('.design-nav')){
+      if($('.design-nav .item-pre-footer').hasClass('current') || $('.design-nav .item-footer').hasClass('current')){
+        $('.form-section').addClass('is-visible');
+      }else{
+        $('.form-section').removeClass('is-visible');
+      };
+
+
+      if($('.item-black').hasClass('current')){
+        $('header').addClass('black');
+        $('.fix').addClass('black');
+      }else{
+        $('header').removeClass('black');
+        $('.fix').removeClass('black');
+      };
+    }
+
+    /*anim-bg*/
+    if($('*').is('.web-design')){
+      var st = $(this).scrollTop(),
+        //MOVE BLOCK
+        topBlock = $('.web-design-1').offset().top,
+        scrollLeft = -(st + topBlock)/2 - 100,
+        translate = 'translate3d( ' + '-50%' + ', ' + scrollLeft + 'px, ' + 0 + ')',
+        anim = 'all 2s ease'
+      $('.bg-design img').css({
+        '-webkit-transform': translate,
+        '-moz-transform': translate,
+        'transform': translate,
+        ' -webkit-transition': anim,
+        'transition': anim
+      });
+    }
+
   });
 
 
@@ -164,5 +222,39 @@ jQuery(document).ready(function ($) {
   $( document ).ready(myfun);
 
 
+  /*next step*/
+
+  $(document).on('click', '.next-step', function (e){
+    e.preventDefault();
+    let index = ($(this).closest('.item').index() + 1)*100;
+
+    $('.form-step .item').css({top: -index +"vh"})
+  });
+
+  /*video project*/
+  if(window.innerWidth > 1279){
+    $(document).on('mouseover', '.project-video .video-wrap', function (e){
+      $(this).find('video').get(0).play();
+      $(this).find('img').hide();
+      $(this).closest('.item').addClass('is-play');
+    });
+
+    $(document).on('mouseout', '.project-video .video-wrap', function (e){
+      $(this).find('video').get(0).pause();
+      $('.project-video .video-wrap img').show();
+      $('.project-video .item').removeClass('is-play');
+    });
+  }else {
+    $('.project-video .video-wrap video').get(0).play();
+    $('.project-video .video-wrap img').hide();
+    $('.project-video .video-wrap').closest('.item').addClass('is-play');
+  }
+
+  /*show text*/
+  $(document).on('click', '.more', function (e){
+    e.preventDefault();
+    $(this).hide();
+    $(this).closest('.link-wrap').siblings('p').slideDown()
+  });
 
 });

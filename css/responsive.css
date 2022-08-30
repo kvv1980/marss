@@ -9,7 +9,21 @@
     width: 1400px; }
 
   .footer .right {
-    width: calc(100% - 700px); } }
+    width: calc(100% - 700px); }
+
+  .wordpress figure {
+    max-width: 500px; }
+
+  .reviews blockquote p {
+    font-size: 40px;
+    line-height: 50px; }
+
+  .form-section h4, .form-section h3 {
+    font-size: 40px;
+    line-height: 50px; }
+
+  .popup-work {
+    width: 1350px; } }
 @media (max-width: 1440px) {
   .content-width {
     width: 1200px; }
@@ -17,7 +31,7 @@
   .about .content .item figure {
     height: 350px; }
 
-  .top-slider h1, .top-slider h2, h1 {
+  .top-slider h1, .top-slider h2, h1, .faq h2 {
     font-size: 70px;
     line-height: 1.1; }
 
@@ -34,6 +48,10 @@
     .about h2 a {
       font-size: 60px;
       line-height: 1.1; }
+
+  .section h2 {
+    font-size: 60px;
+    line-height: 1.1; }
 
   .about h3 {
     font-size: 50px;
@@ -79,6 +97,9 @@
 
   header .content-width-full .right {
     padding-top: 7px; } }
+@media (max-width: 1400px) {
+  .popup-work {
+    width: 1200px; } }
 @media (max-width: 1280px) {
   .content-width {
     width: 960px; }
@@ -105,7 +126,33 @@
     margin: 0 0 10px; }
 
   .footer .bottom p {
-    width: 100%; } }
+    width: 100%; }
+
+  .web-design .right {
+    padding-left: 40%; }
+
+  .accordion {
+    padding-left: 30px; }
+
+  .summary ul {
+    margin-left: 0;
+    width: 100%;
+    padding-left: 30px; }
+
+  .section h2 {
+    font-size: 50px; }
+
+  .wordpress figure {
+    max-width: 450px; }
+
+  .reviews .content {
+    padding: 0; }
+
+  .popup-work {
+    width: 97%; }
+
+  .popup-work .right .video-wrap {
+    display: none; } }
 @media (max-width: 1279px) {
   /*  .bg-img-section .hover-block{
       display: none;
@@ -169,7 +216,7 @@
   .top-slider .swiper-pagination {
     display: none; }
 
-  .top-slider h1, .top-slider h2, h1 {
+  .top-slider h1, .top-slider h2, h1, .faq h2 {
     font-size: 50px; }
 
   .about h2 {
@@ -177,6 +224,9 @@
     margin-bottom: 100px; }
     .about h2 a {
       font-size: 40px; }
+
+  .section h2 {
+    font-size: 40px; }
 
   .about h3 {
     font-size: 30px;
@@ -232,10 +282,123 @@
     width: 100%; }
 
   .ux-section .text .right {
-    width: 100%; } }
+    width: 100%; }
+
+  .web-design .content-width {
+    margin: 0 auto; }
+
+  .web-design .right {
+    padding-left: 0; }
+
+  .web-design-2 {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content; }
+
+  .accordion li {
+    width: 100%; }
+
+  .project-slider .swiper-slide .img-wrap {
+    display: none; }
+
+  .project-slider .swiper-slide figure {
+    -webkit-transform: none !important;
+            transform: none !important; }
+
+  .traveling .text {
+    padding: 0; }
+
+  .traveling h2 img {
+    display: none; }
+
+  .faq {
+    width: calc(100% - 30px); }
+
+  .summary .title {
+    width: 100%; }
+
+  .summary ul li {
+    -webkit-box-ordinal-group: 2 !important;
+        -ms-flex-order: 1 !important;
+            order: 1 !important; }
+
+  .summary ul li:nth-child(n + 6) {
+    margin-left: 0; }
+
+  .wordpress figure {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    bottom: 0;
+    max-width: 100%; }
+
+  .wordpress .text-wrap {
+    margin-left: 0; }
+
+  .reviews blockquote p {
+    font-size: 30px;
+    line-height: 40px; }
+
+  .reviews .left {
+    width: 100%;
+    margin-bottom: 30px; }
+
+  .reviews figure {
+    display: none; }
+
+  .reviews .left .img-wrap {
+    display: block;
+    margin-bottom: 30px; }
+    .reviews .left .img-wrap img {
+      width: 100%;
+      vertical-align: top; }
+
+  .form-section .content .left {
+    width: 100%;
+    height: 100vh; }
+
+  .form-section figure {
+    position: relative;
+    width: 100%;
+    height: 400px; }
+
+  .form-section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content; }
+
+  .summary ul li:first-child {
+    margin-right: 0; }
+
+  .footer {
+    padding: 50px 0; }
+
+  .popup-work .left {
+    width: 320px; }
+
+  .popup-work .right {
+    width: calc(100% - 350px); } }
 @media (max-width: 767px) {
   .content-width {
     width: 540px; }
+
+  .summary ul li p {
+    display: none; }
+
+  .summary ul li h6 {
+    margin-bottom: 10px; }
+
+  .summary ul li {
+    margin-bottom: 30px; }
+
+  .summary ul li .link-wrap {
+    display: block; }
+
+  .popup-work .right {
+    display: none; }
+
+  .popup-work .left {
+    width: 100%; }
 
   .top-line .logo-wrap {
     width: 110px; }
@@ -251,7 +414,40 @@
 
   .anim-section .inner-wrap .subheader {
     font-size: 14px;
-    line-height: 30px; } }
+    line-height: 30px; }
+
+  .accordion-thumb:after {
+    right: 0; }
+
+  .accordion-thumb {
+    padding-right: 40px; }
+
+  .project .title .btn-wrap {
+    display: none; }
+
+  .project .slider-wrap {
+    display: none; }
+
+  .project .bottom {
+    display: block; }
+
+  .project .mob-block {
+    display: block; }
+    .project .mob-block .item {
+      height: 460px;
+      width: 100%;
+      margin-bottom: 30px; }
+      .project .mob-block .item .video-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+        .project .mob-block .item .video-wrap video {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+             object-fit: cover; } }
 @media (max-width: 575px) {
   .content-width {
     width: 100%;
@@ -299,7 +495,7 @@
     font-size: 15px;
     line-height: 18px; }
 
-  .top-slider h1, .top-slider h2, h1 {
+  .top-slider h1, .top-slider h2, h1, .faq h2 {
     font-size: 65px;
     line-height: 65px; }
 
@@ -309,6 +505,10 @@
     .about h2 a, .about h3 a {
       font-size: 38px;
       line-height: 46px; }
+
+  .section h2 {
+    font-size: 50px;
+    line-height: 60px; }
 
   .about {
     padding: 120px 0 120px; }
@@ -445,6 +645,64 @@
     margin-top: 50px; }
 
   .footer .left h3 {
-    font-size: 30px; } }
+    font-size: 30px; }
+
+  .web-design .content-width {
+    padding: 0 10px; }
+
+  .web-design h1 {
+    font-size: 50px;
+    line-height: 60px; }
+
+  .web-design .right h3 {
+    font-size: 25px;
+    line-height: 30px; }
+
+  .accordion-thumb p, .accordion li:before {
+    font-size: 15px;
+    line-height: 18px; }
+
+  .bg-design img {
+    display: none; }
+  .bg-design .mob {
+    display: block;
+    width: 100%;
+    height: 200%; }
+
+  .project .bottom {
+    margin-top: 30px; }
+
+  .summary .title h5 {
+    font-size: 25px;
+    line-height: 30px; }
+
+  .summary ul li h6, .popup-work .left h4, .form-section h4, .form-section h3 {
+    font-size: 25px;
+    line-height: 30px; }
+
+  .summary ul li h6:before {
+    left: -30px; }
+
+  .popup-default .fancybox-close-small:before {
+    right: 15px; }
+
+  .popup-default {
+    padding: 75px 20px 20px; }
+
+  .wordpress figure {
+    margin-bottom: 60px; }
+
+  .reviews blockquote:before {
+    width: 23px; }
+
+  .reviews h2 {
+    margin-bottom: 30px; }
+
+  .reviews blockquote {
+    padding-top: 60px; }
+
+  .reviews blockquote p {
+    font-size: 25px;
+    line-height: 30px; } }
 
 /*# sourceMappingURL=responsive.css.map */
