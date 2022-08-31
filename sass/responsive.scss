@@ -411,7 +411,7 @@
     display: block;
   }
   .popup-work .right{
-    display: none;
+    width: 100%;
   }
   .popup-work .left{
     width: 100%;
@@ -467,6 +467,52 @@
         }
       }
     }
+  }
+  .popup-work .right{
+    margin-top: 60px;
+  }
+  .popup-work .right .item-wrap .item .bg-item{
+    display: none;
+  }
+  .popup-work .right .item-wrap .item{
+    padding: 0;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0;
+    flex-direction: row!important;
+    h4{
+      width: calc(100% - 140px);
+      margin: 0;
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+  .popup-work .right .item-wrap .item .btn-wrap{
+    width: 120px;
+    a{
+      width: 100%;
+      padding: 0 5px;
+      text-align: center;
+    }
+  }
+  .popup-work .right .item-wrap{
+    width: 100%;
+    margin: 0;
+  }
+  .popup-default .fancybox-close-small:before {
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    content: '';
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: url(../img/icon-5.svg)no-repeat center;
+    background-size: contain;
+  }
+  .form-default .input-wrap-submit .btn-default{
+    min-width: 220px;
   }
 }
 
@@ -734,5 +780,13 @@
   .reviews blockquote p {
     font-size: 25px;
     line-height: 30px;
+  }
+  .project-black h1{
+    padding: 0 10px;
+    text-align: center;
+  }
+  .project-black h1{
+    font-size: 50px;
+    line-height: 60px;
   }
 }
